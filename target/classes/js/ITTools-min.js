@@ -1,0 +1,1 @@
+(function(a){a(function(){var b=a(".view-question #question").attr("data-post-id");if(b===undefined){return}var c=[{id:1,title:"Backlog 1",url:"#"},{id:2,title:"Backlog 2",url:"#"},{id:3,title:"Backlog 3",url:"#"}];var c=EliteSoft.Confluence.Question.Answer.Extension.Templates.backlogList({backlogs:c});var d=a("#question-sidebar");d.append(c)})}(AJS.$));

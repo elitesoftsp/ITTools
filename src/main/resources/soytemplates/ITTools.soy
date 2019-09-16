@@ -1,0 +1,30 @@
+{namespace EliteSoft.Confluence.Question.Answer.Extension.Templates}
+
+/**
+* Render backlog list
+* @param questionId
+* @param backlogs
+*/
+{template .backlogList}
+
+{if $backlogs.length > 0}
+    <div class="module backlogs">
+
+        <a class="aui-button aui-button-primary" href="jira?questionId={$questionId}">Create Backlog</a>
+
+        <h4>Backlog List</h4>
+        <div class="related">
+
+            {foreach $backlog in $backlogs}
+
+                <div class="question-spacer">
+                    <a href="{$backlog.url}" class="question-hyperlink">
+                        {$backlog.title}
+                    </a>
+                </div>
+            {/foreach}
+
+        </div>
+    </div>
+{/if}
+{/template}
